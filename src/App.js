@@ -5,8 +5,10 @@ import Sidebar from "./Sidebar/Sidebar";
 import Widgets from "./Widgets/Widgets";
 import Login from "./Login/Login";
 import firebase from './firebase'
+import { useStateValue } from "./StateProvider";
 function App() {
-  const user = null;
+  const [{user},dispatch]=useStateValue()
+
   let login = <Login />;
   let app = (
     <>
